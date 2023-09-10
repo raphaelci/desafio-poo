@@ -1,4 +1,4 @@
-package br.com.dio.desafio.util;
+package br.com.dio.desafio.util.excecoes;
 
 public class InvalidDeveloperException extends RuntimeException{
 

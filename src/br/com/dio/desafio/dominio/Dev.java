@@ -1,6 +1,6 @@
 package br.com.dio.desafio.dominio;
 
-import br.com.dio.desafio.util.InvalidDeveloperException;
+import br.com.dio.desafio.util.excecoes.InvalidDeveloperException;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
