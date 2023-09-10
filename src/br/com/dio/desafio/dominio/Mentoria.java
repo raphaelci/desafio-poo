@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Mentoria extends Conteudo{
 
-    private LocalDate data;
+    private LocalDate data = LocalDate.now();
 
     @Override
     public Double calcularXp() {

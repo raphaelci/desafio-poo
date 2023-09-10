@@ -1,5 +1,7 @@
 package br.com.dio.desafio.dominio;
 
+import br.com.dio.desafio.util.InvalidDeveloperException;
+
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,13 +24,13 @@ public class Dev {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
         } else {
-            throw new RuntimeException("Você não está matriculado em nenhum conteúdo!");
+            throw new InvalidDeveloperException("Você não está matriculado em nenhum conteúdo!");
         }
 
     }
 
     public Double calcularXp(){
-        return this.conteudosInscritos.stream().mapToDouble(conteudo -> conteudo.calcularXp()).sum();
+        return this.conteudosConcluidos.stream().mapToDouble(conteudo -> conteudo.calcularXp()).sum();
     }
 
     public String getNome() {
